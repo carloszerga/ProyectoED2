@@ -1,26 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package dao.to;
 
-/**
- *
- * @author CARLOS
- */
 public class ClienteTO {
     private String _Id;
-    private String _Dni;
+    private int _Dni;
     private String _Nombres;
     private String _Apellidos;
     private String _Telefono;
     private String _Email;
     private String _Direccion;
     private String _Distrito;
+    public ClienteTO(){
+        
+    }
 
-    public ClienteTO(String _Id, String _Dni, String _Nombres, String _Apellidos, String _Telefono, String _Email, String _Direccion, String _Distrito) {
+    public ClienteTO(String _Id, int _Dni, String _Nombres, String _Apellidos, String _Telefono, String _Email, String _Direccion, String _Distrito) {
         this._Id = _Id;
         this._Dni = _Dni;
         this._Nombres = _Nombres;
@@ -60,14 +53,14 @@ public class ClienteTO {
     /**
      * @return the _Dni
      */
-    public String getDni() {
+    public int getDni() {
         return _Dni;
     }
 
     /**
      * @param _Dni the _Dni to set
      */
-    public void setDni(String _Dni) {
+    public void setDni(int _Dni) {
         this._Dni = _Dni;
     }
 

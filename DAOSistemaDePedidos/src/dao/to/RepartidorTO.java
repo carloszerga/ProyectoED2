@@ -1,18 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package dao.to;
 
-/**
- *
- * @author CARLOS
- */
 public class RepartidorTO {
     private String _Id;
-    private String _Dni;
+    private int _Dni;
     private String _Nombres;
     private String _Apellidos;
     private String _Telefono;
@@ -20,8 +10,12 @@ public class RepartidorTO {
     private String _turno;
     private String _usario;
     private String _contraseña;
-
-    public RepartidorTO(String _Id, String _Dni, String _Nombres, String _Apellidos, String _Telefono, String _Email, String _turno, String _usario, String _contraseña) {
+    
+    public RepartidorTO(){
+        
+    }
+            
+    public RepartidorTO(String _Id, int _Dni, String _Nombres, String _Apellidos, String _Telefono, String _Email, String _turno, String _usario, String _contraseña) {
         this._Id = _Id;
         this._Dni = _Dni;
         this._Nombres = _Nombres;
@@ -61,14 +55,14 @@ public class RepartidorTO {
     /**
      * @return the _Dni
      */
-    public String getDni() {
+    public int getDni() {
         return _Dni;
     }
 
     /**
      * @param _Dni the _Dni to set
      */
-    public void setDni(String _Dni) {
+    public void setDni(int _Dni) {
         this._Dni = _Dni;
     }
 

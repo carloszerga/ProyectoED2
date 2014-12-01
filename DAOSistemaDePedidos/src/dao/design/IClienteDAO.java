@@ -19,5 +19,5 @@ public interface IClienteDAO {
     public abstract String insertarCliente (ClienteTO cliente);
     public abstract String actualizarCliente(ClienteTO cliente);
     public abstract String eliminarCliente(List<Integer> idcliente);
-    public abstract ClienteTO datoClienteporId(Integer id);
+    public abstract ClienteTO datoClienteporDni(Integer dni);
 }

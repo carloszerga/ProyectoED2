@@ -20,4 +20,5 @@ public interface IRepartidorDAO {
     public abstract String actualizarRepartidor(RepartidorTO repartidor);
     public abstract String eliminarRepartidor(List<Integer> idrepartidor);
     public abstract RepartidorTO datoRepartidorporId(Integer id);
+    public abstract RepartidorTO repartidorLogin(String usuario, String pwd);
 }
