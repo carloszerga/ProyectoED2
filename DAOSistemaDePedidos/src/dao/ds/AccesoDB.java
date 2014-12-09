@@ -23,9 +23,10 @@ public class AccesoDB {
         Connection cn=null;
         try{
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/dbuniversidad",
-                                           "root","");
+            cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/repartos",
+                                           "root","moxi");
         }catch (Exception e){
+            System.out.println(e);
         }
         return cn;
     }
