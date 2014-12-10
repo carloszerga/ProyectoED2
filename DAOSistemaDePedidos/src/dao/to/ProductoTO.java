@@ -11,25 +11,25 @@ package dao.to;
  * @author CARLOS
  */
 public class ProductoTO {
-    private String _Id;
+    private int _Id;
     private String _Nombre;
     private String _Descripcion;
-    private String _Stock;
+    private int _Stock;
     private String _Fecha_Vencimiento;
     private String _Tipo;
     private String _Marca;
     private String _Unidad;
-    private String _Precio_Unidad;
+    private float _Precio_Unidad;
 
-    public ProductoTO(String _Id, String _Nombre, String _Descripcion, String _Stock, String _Fecha_Vencimiento, String _Tipo, String _Marca, String _Unidad, String _Precio_Unidad) {
+    public ProductoTO(int _Id, String _Nombre,int _Stock, String _Tipo, float _Precio_Unidad) {
         this._Id = _Id;
         this._Nombre = _Nombre;
-        this._Descripcion = _Descripcion;
+        this._Descripcion = "";
         this._Stock = _Stock;
-        this._Fecha_Vencimiento = _Fecha_Vencimiento;
+        this._Fecha_Vencimiento = "";
         this._Tipo = _Tipo;
-        this._Marca = _Marca;
-        this._Unidad = _Unidad;
+        this._Marca = "";
+        this._Unidad = "";
         this._Precio_Unidad = _Precio_Unidad;
     }
     
@@ -48,14 +48,14 @@ public class ProductoTO {
     /**
      * @return the _Id
      */
-    public String getId() {
+    public int getId() {
         return _Id;
     }
 
     /**
      * @param _Id the _Id to set
      */
-    public void setId(String _Id) {
+    public void setId(int _Id) {
         this._Id = _Id;
     }
 
@@ -90,14 +90,14 @@ public class ProductoTO {
     /**
      * @return the _Stock
      */
-    public String getStock() {
+    public int getStock() {
         return _Stock;
     }
 
     /**
      * @param _Stock the _Stock to set
      */
-    public void setStock(String _Stock) {
+    public void setStock(int _Stock) {
         this._Stock = _Stock;
     }
 
@@ -160,14 +160,14 @@ public class ProductoTO {
     /**
      * @return the _Precio_Unidad
      */
-    public String getPrecio_Unidad() {
+    public float getPrecio_Unidad() {
         return _Precio_Unidad;
     }
 
     /**
      * @param _Precio_Unidad the _Precio_Unidad to set
      */
-    public void setPrecio_Unidad(String _Precio_Unidad) {
+    public void setPrecio_Unidad(float _Precio_Unidad) {
         this._Precio_Unidad = _Precio_Unidad;
     }
 }

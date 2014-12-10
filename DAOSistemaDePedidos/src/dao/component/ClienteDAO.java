@@ -33,7 +33,35 @@ public class ClienteDAO implements IClienteDAO {
 
     @Override
     public String insertarCliente(ClienteTO cliente) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String rpta=null;
+        Connection cn= db.getConnection();
+        String procedimientoalmacendo ="{CALL sp_insertarcliente(?,?,?,?,?,?,?)}";
+        if(cn!=null){
+            try{
+                CallableStatement cs=cn.prepareCall(procedimientoalmacendo);
+                cs.setString(1,cliente.getNombres());
+                cs.setString(2,cliente.getApellidos());
+                cs.setString(3,cliente.getTelefono());
+                cs.setString(4,cliente.getEmail());
+                cs.setString(5,cliente.getDireccion());
+                cs.setString(6,cliente.getDistrito());
+                cs.setInt(7,cliente.getDni());
+                int inserto= cs.executeUpdate();
+                if(inserto==0){
+                    rpta="Error";
+                }
+            }catch(SQLException ex){
+                rpta=ex.getMessage();
+            }
+            finally{
+                try{
+                    cn.close();
+                }catch(SQLException e){
+                    rpta= e.getMessage();
+                }
+            }
+        }
+        return rpta;
     }
 
     @Override

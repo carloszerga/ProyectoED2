@@ -1,7 +1,7 @@
 package dao.to;
 
 public class RepartidorTO {
-    private String _Id;
+    private int _Id;
     private int _Dni;
     private String _Nombres;
     private String _Apellidos;
@@ -10,12 +10,14 @@ public class RepartidorTO {
     private String _turno;
     private String _usario;
     private String _contraseña;
+
+    private String _cargo;
     
     public RepartidorTO(){
         
     }
             
-    public RepartidorTO(String _Id, int _Dni, String _Nombres, String _Apellidos, String _Telefono, String _Email, String _turno, String _usario, String _contraseña) {
+    public RepartidorTO(int _Id, int _Dni, String _Nombres, String _Apellidos, String _Telefono, String _Email, String _turno, String _usario, String _contraseña, String cargo) {
         this._Id = _Id;
         this._Dni = _Dni;
         this._Nombres = _Nombres;
@@ -25,6 +27,7 @@ public class RepartidorTO {
         this._turno = _turno;
         this._usario = _usario;
         this._contraseña = _contraseña;
+        this._cargo= cargo;
     }
     public RepartidorTO(RepartidorTO aux) {
         this._Id = _Id;
@@ -41,14 +44,14 @@ public class RepartidorTO {
     /**
      * @return the _Id
      */
-    public String getId() {
+    public int getId() {
         return _Id;
     }
 
     /**
      * @param _Id the _Id to set
      */
-    public void setId(String _Id) {
+    public void setId(int _Id) {
         this._Id = _Id;
     }
 
@@ -164,4 +167,11 @@ public class RepartidorTO {
         this._contraseña = _contraseña;
     }
     
+    public String getCargo() {
+        return _cargo;
+    }
+
+    public void setCargo(String _cargo) {
+        this._cargo = _cargo;
+    }
 }
